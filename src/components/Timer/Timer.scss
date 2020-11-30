@@ -1,0 +1,12 @@
+@import '../variables.scss';
+
+.timer {
+  position: absolute;
+  top: 110px;
+  width: 170px;
+  height: 40px;
+  background: $gray;
+  color: $white;
+  font-size: $font-30;
+  text-align: center;
+}

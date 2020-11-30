@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+//styles
+import "./App.scss";
 
-function App() {
+//components
+import Main from './components/Main/Main'
+import Loader from './components/Loader/Loader'
+
+
+const App = () => {
+  const [isLoad, setIsLoad] = useState(false);
+  //псевдопреоадер, функций своих не выполняет, но сделал чтобы было :3
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoad(true);
+    }, 2000);
+  }, [isLoad]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="overflow-hidden">
+      {isLoad ? (
+        <Main/>
+      ) : (
+        <Loader/>
+      )}
     </div>
   );
-}
+};
 
 export default App;

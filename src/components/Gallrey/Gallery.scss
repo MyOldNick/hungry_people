@@ -1,0 +1,120 @@
+@import '../variables.scss';
+
+.gallery {
+  width: 100vw;
+  height: auto;
+  min-height: 630px;
+  padding-top: 10px;
+  background-image: url("../../images/specialty's-bg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &__title {
+    text-align: center;
+    color: $white;
+    margin-left: -15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+  }
+
+  &__images-container {
+    display: flex;
+    padding: 0 40px;
+  }
+
+  &__first-image {
+    position: relative;
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -150px;
+      top: 70px;
+      background-image: url("../../images/about-img-2.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+
+    &::after {
+      box-sizing: border-box;
+      position: absolute;
+      height: 75px;
+      width: 445px;
+      top: 230px;
+      right: -140px;
+      padding: 25px 30px;
+      color: $white;
+      font-size: $font-22;
+      font-family: BannyRound;
+      text-transform: uppercase;
+      background: $black;
+      transform: rotate(90deg);
+      content: "weddings";
+    }
+  }
+
+  &__second-image {
+    position: relative;
+    margin-left: 20px;
+
+    &::before {
+      box-sizing: border-box;
+      position: absolute;
+      height: 75px;
+      width: 445px;
+      top: 230px;
+      right: 235px;
+      padding: 25px 30px;
+      color: $white;
+      font-size: $font-22;
+      font-family: BannyRound;
+      text-transform: uppercase;
+      background: $black;
+      transform: rotate(-90deg);
+      content: "corporate pzrties";
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 290px;
+      top: 70px;
+      background-image: url("../../images/about-img-2.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &__line-container {
+    position: relative;
+  }
+
+  &__line {
+    position: absolute;
+    top: 300px;
+    width: 729px;
+    height: 1px;
+    background-color: $gray;
+    transform: rotate(-90deg);
+  }
+
+  &__line-left {
+    left: -180px;
+  }
+
+  &__line-center {
+    left: 0px;
+  }
+
+  &__line-right {
+    right: -150px;
+  }
+
+  &__contacts {
+    color: $white;
+    text-align: center;
+    margin-top: -10px;
+    opacity: 0.5;
+  }
+}

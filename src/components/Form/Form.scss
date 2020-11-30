@@ -1,0 +1,94 @@
+@import '../variables.scss';
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__main {
+    width: 50%;
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  &__title {
+    position: relative;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: BannyRound;
+
+    &::before {
+      position: absolute;
+      width: 70px;
+      height: 5px;
+      top: 50px;
+      left: 270px;
+      background-color: $yellow;
+      border-radius: 10px;
+      content: "";
+    }
+  }
+
+  &__input-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+    padding-left: 30px;
+  }
+
+  &__input {
+    position: relative;
+    border: none;
+    box-sizing: border-box;
+    width: 260px;
+    height: 55px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-left: 10px;
+    background-color: $secondary-gray;
+    border-radius: 5px;
+  }
+
+  &__input-icon {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 240px;
+    font-size: $font-20;
+    opacity: 0.4;
+  }
+
+  &__input-button {
+    box-sizing: border-box;
+    width: 530px;
+    height: 56px;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-top: 15px;
+    background-color: $yellow;
+    border-radius: 5px;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+  }
+
+  &__image {
+    position: relative;
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 290px;
+      top: 70px;
+      background-image: url("../../images/about-img-2.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &__work-time {
+    margin: 0 auto;
+    margin-bottom: 50px;
+    opacity: 0.5;
+  }
+}

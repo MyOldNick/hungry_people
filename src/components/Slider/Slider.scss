@@ -1,0 +1,142 @@
+@import '../variables.scss';
+
+.slider {
+  position: relative;
+  width: 100vw;
+  height: auto;
+  min-height: 630px;
+  padding-top: 10px;
+  background-image: url("../../images/specialty's-bg.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  &__subtitle {
+    margin-top: 20px;
+    margin-left: -10px;
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5rem;
+  }
+
+  &__main {
+    display: flex;
+  }
+
+  &__image-container {
+    position: relative;
+    margin-left: 40px;
+    width: 50%;
+
+    &::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -150px;
+      top: 70px;
+      background-image: url("../../images/about-img-2.svg");
+      background-repeat: no-repeat;
+      content: "";
+    }
+  }
+
+  &__image {
+    max-width: 540px;
+    max-height: 540px;
+  }
+
+  &__description {
+    width: 50%;
+    margin-top: 70px;
+    margin-left: 80px;
+    color: $white;
+    text-align: center;
+  }
+
+  &__description-title {
+    position: relative;
+    font-size: $font-40;
+    text-transform: uppercase;
+    font-family: BannyRound;
+
+    &::before {
+      position: absolute;
+      width: 75px;
+      height: 5px;
+      top: 70px;
+      left: 245px;
+      background-color: $yellow;
+      border-radius: 10px;
+      content: "";
+    }
+  }
+
+  &__description-subtitle {
+    font-weight: bold;
+    font-size: $font-16;
+  }
+
+  &__description-main {
+    font-size: $font-13;
+  }
+
+  &__button-container {
+    display: flex;
+    width: 100px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+    background-color: $white;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  &__button-active {
+    opacity: 1;
+  }
+
+  &__line-container {
+    position: relative;
+  }
+
+  &__line {
+    position: absolute;
+    top: 300px;
+    width: 729px;
+    height: 1px;
+    background-color: $gray;
+    transform: rotate(-90deg);
+  }
+
+  &__line-left {
+    left: -180px;
+  }
+
+  &__line-center {
+    left: 221px;
+  }
+
+  &__line-right {
+    right: -150px;
+  }
+}
+
+.fade {
+  animation: fadeIn 0.7s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,74 @@
+@import '../variables.scss';
+
+.menu {
+  padding-bottom: 70px;
+  &__title {
+    position: relative;
+    text-align: center;
+    font-size: $font-33;
+    font-family: BannyRound;
+
+    &::after {
+      position: absolute;
+      width: 75px;
+      height: 5px;
+      top: 70px;
+      left: 560px;
+      background-color: $yellow;
+      border-radius: 10px;
+      content: "";
+    }
+  }
+
+  &__description {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 60px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  &__categories-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: 30px auto;
+  }
+
+  &__categories-text {
+      margin-top: 25px;
+      font-size: $font-11;
+      font-weight: bold;
+      user-select: none;
+      cursor: pointer;
+  }
+
+  &__categories-line {
+    position: absolute;
+    top: 30px;
+    width: 47px;
+    height: 1px;
+    margin-left: 50px;
+    background-color: $gray;
+    transform: rotate(90deg);
+  }
+
+  &__positions-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  &__position-title {
+      font-weight: bold;
+      font-family: BannyRound;
+      font-size: $font-16;
+  }
+
+  &__position-subtitle {
+      margin-top: -15px;
+      font-size: $font-12;
+      opacity: 0.5;
+  }
+}
